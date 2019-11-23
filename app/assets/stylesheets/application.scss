@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "variables";
+
+ * {
+   margin: 0;
+   padding: 0;
+ }
+
+ body {
+  font-family: "Raleway", sans-serif;
+ }
