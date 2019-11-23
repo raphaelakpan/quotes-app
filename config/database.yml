@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  username: postgres
+  pool: 5
+
+development:
+  <<: *default
+  database: quotes_app_development
+
+test:
+  <<: *default
+  database: quotes_app_test
+
+production:
+  <<: *default
+  database: quotes_app
