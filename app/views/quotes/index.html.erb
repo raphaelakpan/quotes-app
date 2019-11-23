@@ -1,1 +1,17 @@
-<h1> Quotes home </h1>
+<div class="quotes">
+  <h1 class="quotes__heading">Quotes</h1>
+  <div class="quotes__container">
+    <% @quotes.each do |quote| %>
+      <div class="quotes__quote">
+        <div class="quote__content">
+          <%= quote.content %>
+        </div>
+        <div class="quote__author">
+          - <%= quote.author.name %>
+        </div>
+        <%= image_tag  "quote_start.svg", class: "quote__start_icon" %>
+        <%= image_tag  "quote_end.svg", class: "quote__end_icon" %>
+      </div>
+    <% end %>
+  </div>
+</div>

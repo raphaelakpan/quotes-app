@@ -1,0 +1,17 @@
+.appbar {
+  background-color: $primary-color;
+  color: white;
+  padding: 5px 200px;
+
+  .appbar__brand {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .appbar__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+  }
+}
