@@ -13,15 +13,45 @@
  *= require_self
  */
 
- @import "variables";
- @import "app_bar";
- @import "quotes/*";
+@import "variables";
+@import "appbar";
+@import "quotes/*";
 
- * {
+* {
    margin: 0;
    padding: 0;
- }
+}
 
- body {
+body {
   font-family: "Raleway", sans-serif;
- }
+  background-color: $secondary-color;
+}
+
+.flash {
+  margin: auto;
+  margin-top: 30px;
+  width: 50%;
+  padding: 20px 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+
+  &.success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+  }
+
+  .flash__close_button {
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .flash {
+    width: 70%;
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+}

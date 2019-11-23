@@ -2,13 +2,12 @@
   padding: 50px 0;
 
   .quotes__container {
-    margin: auto;
+    margin: 90px auto;
     min-height: 90vh;
     width: 50%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 94px 170px;
-    margin-top: 90px;
   }
 
   .quotes__heading {
@@ -27,6 +26,7 @@
     .quote__content {
       font-size: 10px;
       line-height: 125%;
+      word-break: break-word;
     }
 
     .quote__author {
@@ -151,6 +151,55 @@
           background-color: rgba(35, 58, 179, 0.8);
           font-weight: 400;
           font-family: inherit;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .quotes {
+    .quotes__container {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .quotes {
+    .quotes__heading {
+      font-size: 30px;
+    }
+
+    .quotes__container {
+      grid-template-columns: 1fr;
+      margin: 0;
+      width: 100%;
+      padding: 16%;
+      box-sizing: border-box;
+    }
+
+    .quotes__add_button {
+      left: 44%;
+    }
+
+    .add_quote_modal {
+      .add_quote_modal__modal {
+        width: 90%;
+
+        .modal__header {
+          font-size: 15px;
+        }
+
+        .modal__body {
+          margin: 20px 25px;
+
+          .quote__content_input,
+          .quote__author_input,
+          .quote__submit_button {
+            font-size: 12px;
+          }
         }
       }
     }

@@ -1,7 +1,9 @@
 <header class="appbar">
   <div class="appbar__container">
-    <a href="/" class="appbar__brand">Quotes</a>
-    <input type="text">
+    <%= link_to  "Quotes", root_path, class: "appbar__brand" %>
+    <div class="appbar__search">
+      <input type="text" class="appbar__search_input" placeholder="Search Quotes or Authors">
+      <%= image_tag  "search_icon.svg", class: "appbar__search_icon" %>
+    </div>
   </div>
 </header>
-

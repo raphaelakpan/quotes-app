@@ -6,7 +6,9 @@
 require("@rails/ujs").start()
 require("turbolinks").start()
 require('jquery')
-require("../quotes")
+require("quotes")
+require("quotes/addQuoteForm")
+require("app/flash_message")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
