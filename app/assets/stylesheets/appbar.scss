@@ -1,0 +1,83 @@
+.appbar {
+  background-color: $primary-color;
+  color: white;
+  padding: 5px 200px;
+
+  .appbar__brand {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .appbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+  }
+
+  .appbar__search {
+    position: relative;
+    margin-left: 15px;
+    width: 300px;
+  }
+
+  .appbar__search_input {
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    padding-right: 40px;
+    font-size: 14px;
+    font-weight: 300;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .appbar__search_icon {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .appbar {
+    padding: 5px 10%;
+
+    .appbar__brand {
+      font-size: 20px;
+    }
+
+    .appbar__search {
+      width: 200px;
+    }
+
+    .appbar__search_input {
+      font-size: 12px;
+      padding: 8px 12px;
+    }
+
+    .appbar__search_icon {
+      width: 14px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .appbar {
+    .appbar__brand {
+      font-size: 15px;
+    }
+
+    .appbar__search_input {
+      font-size: 10px;
+      padding: 6px 10px;
+    }
+
+    .appbar__search_icon {
+      width: 12px;
+      top: 6px;
+    }
+  }
+}

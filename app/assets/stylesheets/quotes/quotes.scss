@@ -1,0 +1,207 @@
+.quotes {
+  padding: 50px 0;
+
+  .quotes__container {
+    margin: 90px auto;
+    min-height: 90vh;
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 94px 170px;
+  }
+
+  .quotes__heading {
+    font-weight: 300;
+    font-size: 48px;
+    text-align: center;
+  }
+
+  .quotes__quote {
+    padding: 25px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    position: relative;
+    align-self: start;
+
+    .quote__content {
+      font-size: 10px;
+      line-height: 125%;
+      word-break: break-word;
+    }
+
+    .quote__author {
+      text-align: right;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $grey;
+      font-size: 12px;
+      margin-top: 20px;
+    }
+
+    .quote__start_icon {
+      position: absolute;
+      top: -22px;
+      left: -30px;
+    }
+
+    .quote__end_icon {
+      position: absolute;
+      right: -30px;
+      bottom: -22px;
+    }
+  }
+
+  .quotes__add_button {
+    font-size: 65px;
+    border: 3px solid $primary-color;
+    position: fixed;
+    bottom: 10%;
+    left: 49%;
+    border-radius: 58px;
+    width: 43px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+    color: $primary-color;
+    background-color: white;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+  }
+
+  .add_quote_modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    &.show {
+      display: flex;
+    }
+
+    .add_quote_modal__overlay {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .add_quote_modal__modal {
+      background-color: white;
+      z-index: 1;
+      width: 500px;
+
+      .modal__header {
+        background-color: $secondary-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 18px;
+        position: relative;
+        font-size: 21px;
+
+        .modal__close_button {
+          position: absolute;
+          right: 12px;
+          top: 5px;
+          cursor: pointer;
+        }
+      }
+
+      .modal__body {
+        display: grid;
+        grid-gap: 21px;
+        margin: 20px 40px;
+
+        .quote__error {
+          display: none;
+          color: red;
+          font-size: 15px;
+        }
+
+        .quote__content_input {
+          border: 1px solid $light-grey;
+          padding: 10px;
+          resize: none;
+          font-size: 15px;
+        }
+
+        .quote__author_input {
+          border: 1px solid $light-grey;
+          padding: 10px;
+          font-size: 15px;
+        }
+
+        .quote__submit_button {
+          text-transform: uppercase;
+          padding: 10px;
+          font-size: 16px;
+          width: 153px;
+          margin: 10px auto;
+          margin-top: 20px;
+          border: none;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 3px;
+          color: white;
+          background-color: rgba(35, 58, 179, 0.8);
+          font-weight: 400;
+          font-family: inherit;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .quotes {
+    .quotes__container {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .quotes {
+    .quotes__heading {
+      font-size: 30px;
+    }
+
+    .quotes__container {
+      grid-template-columns: 1fr;
+      margin: 0;
+      width: 100%;
+      padding: 16%;
+      box-sizing: border-box;
+    }
+
+    .quotes__add_button {
+      left: 44%;
+    }
+
+    .add_quote_modal {
+      .add_quote_modal__modal {
+        width: 90%;
+
+        .modal__header {
+          font-size: 15px;
+        }
+
+        .modal__body {
+          margin: 20px 25px;
+
+          .quote__content_input,
+          .quote__author_input,
+          .quote__submit_button {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

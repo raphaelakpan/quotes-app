@@ -1,0 +1,6 @@
+<% flash.each do |key, value| %>
+  <div class='<%= "flash #{key}" %>'>
+    <%= value %>
+    <span class="flash__close_button">x</span>
+  </div>
+<% end %>
