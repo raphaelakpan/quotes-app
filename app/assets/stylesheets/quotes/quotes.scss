@@ -146,10 +146,16 @@
           font-size: 15px;
         }
 
+        .quote__author_input_container {
+          position: relative;
+        }
+
         .quote__author_input {
           border: 1px solid $light-grey;
           padding: 10px;
           font-size: 15px;
+          width: 100%;
+          box-sizing: border-box;
         }
 
         .quote__submit_button {

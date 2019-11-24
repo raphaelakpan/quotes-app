@@ -9,6 +9,7 @@ require('jquery')
 require("src/quotes")
 require("src/quotes/addQuoteForm")
 require("src/quotes/infiniteScroll")
+require("src/quotes/autosuggest")
 require("src/flash_message")
 
 
