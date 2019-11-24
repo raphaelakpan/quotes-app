@@ -16,6 +16,10 @@ gem "bootsnap", ">= 1.4.2", require: false
 
 group :development, :test do
   gem "pry"
+  gem "rspec-rails"
+  gem "capybara"
+  gem "selenium-webdriver"
+  gem "chromedriver-helper"
 end
 
 group :development do
