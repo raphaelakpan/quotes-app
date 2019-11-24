@@ -1,9 +1,19 @@
 <header class="appbar">
   <div class="appbar__container">
     <%= link_to  "Quotes", root_path, class: "appbar__brand" %>
-    <div class="appbar__search">
-      <input type="text" class="appbar__search_input" placeholder="Search Quotes or Authors">
-      <%= image_tag  "search_icon.svg", class: "appbar__search_icon" %>
-    </div>
+    <form class="appbar__search">
+      <input
+        type="text"
+        class="appbar__search_input"
+        placeholder="Search Quotes or Authors"
+        name="query"
+        value="<%= params[:query] %>"
+      />
+      <% if params[:query].present? %>
+        <%= image_tag  "cancel_icon.svg", class: "appbar__clear_search_icon" %>
+      <% else %>
+        <%= image_tag  "search_icon.svg", class: "appbar__search_icon" %>
+      <% end %>
+    </form>
   </div>
 </header>

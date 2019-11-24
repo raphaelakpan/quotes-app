@@ -4,6 +4,8 @@ $(document).ready(() => {
   const addQuoteModalOverlay = $('.add_quote_modal__overlay');
   const closeQuoteModalButton = $('.modal__close_button');
 
+  const appBarClearSearchIcon = $('.appbar__clear_search_icon');
+
   const toggleAddQuoteModal = () => {
     addQuoteModal.toggleClass('show');
   }
@@ -11,5 +13,7 @@ $(document).ready(() => {
   addQuoteButton.click(toggleAddQuoteModal);
   closeQuoteModalButton.click(toggleAddQuoteModal);
   addQuoteModalOverlay.click(toggleAddQuoteModal);
+
+  appBarClearSearchIcon.click(() => document.location = '/')
 })
 

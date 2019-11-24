@@ -1,6 +1,12 @@
 .quotes {
   padding: 50px 0;
 
+  .quotes__search_result {
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+  }
+
   .quotes__container {
     margin: 90px auto;
     width: 50%;
@@ -21,6 +27,16 @@
     background-color: white;
     position: relative;
     align-self: start;
+
+    &.quotes__quote--none {
+      box-shadow: none;
+      background-color: transparent;
+      justify-self: center;
+
+      h2 {
+        font-weight: 100;
+      }
+    }
 
     .quote__content {
       font-size: 10px;
@@ -159,7 +175,8 @@
 
 @media screen and (max-width: 1024px) {
   .quotes {
-    .quotes__container {
+    .quotes__container,
+    .quotes__search_result {
       width: 80%;
     }
   }

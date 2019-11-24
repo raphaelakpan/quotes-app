@@ -19,7 +19,7 @@
   .appbar__search {
     position: relative;
     margin-left: 15px;
-    width: 300px;
+    width: 400px;
   }
 
   .appbar__search_input {
@@ -33,10 +33,16 @@
     box-sizing: border-box;
   }
 
-  .appbar__search_icon {
+  .appbar__search_icon,
+  .appbar__clear_search_icon {
     position: absolute;
     right: 12px;
     top: 8px;
+  }
+
+  .appbar__clear_search_icon {
+    top: 12px;
+    cursor: pointer;
   }
 }
 
@@ -49,7 +55,7 @@
     }
 
     .appbar__search {
-      width: 200px;
+      width: 300px;
     }
 
     .appbar__search_input {
@@ -59,6 +65,10 @@
 
     .appbar__search_icon {
       width: 14px;
+    }
+
+    .appbar__clear_search_icon {
+      top: 10px;
     }
   }
 }
@@ -70,6 +80,10 @@
       font-size: 15px;
     }
 
+    .appbar__search {
+      width: 200px;
+    }
+
     .appbar__search_input {
       font-size: 10px;
       padding: 6px 10px;
@@ -77,6 +91,10 @@
 
     .appbar__search_icon {
       width: 12px;
+      top: 6px;
+    }
+
+    .appbar__clear_search_icon {
       top: 6px;
     }
   }

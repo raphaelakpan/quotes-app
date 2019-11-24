@@ -1,5 +1,10 @@
 <div class="quotes">
   <h1 class="quotes__heading">Quotes</h1>
+  <% if params[:query].present? %>
+    <div class="quotes__search_result">
+      Showing search results for <strong>"<%= params[:query] %>"</strong>
+    </div>
+  <% end %>
   <div class="quotes__container">
     <% @quotes.each do |quote| %>
       <div class="quotes__quote">
@@ -9,6 +14,13 @@
         <div class="quote__author">
           - <%= quote.author.name %>
         </div>
+        <%= image_tag  "quote_start.svg", class: "quote__start_icon" %>
+        <%= image_tag  "quote_end.svg", class: "quote__end_icon" %>
+      </div>
+    <% end %>
+    <% if @quotes.empty? %>
+      <div class="quotes__quote quotes__quote--none">
+         <h2> No quotes found </h2>
         <%= image_tag  "quote_start.svg", class: "quote__start_icon" %>
         <%= image_tag  "quote_end.svg", class: "quote__end_icon" %>
       </div>

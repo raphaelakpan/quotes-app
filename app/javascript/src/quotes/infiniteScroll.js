@@ -22,8 +22,16 @@ class InfiniteScroll {
   static loadMoreQuotes = () => {
     if (!this.hasData) return;
 
+    let url = `/?limit=${this.limit}&offset=${this.offset}`;
+
+    // retrieve query string value from the page url if present
+    if (location.search.match("query")) {
+      const query = location.search.split("=")[1];
+      url += `&query=${query}`;
+    }
+
     $.ajax({
-      url: `/?limit=${this.limit}&offset=${this.offset}`,
+      url: url,
       method: 'get',
       dataType: 'json',
       success: (data) => {

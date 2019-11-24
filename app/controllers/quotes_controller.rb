@@ -1,10 +1,10 @@
 class QuotesController < ApplicationController
   def index
-    @quotes = Quote
-      .includes(:author)
-      .order(created_at: :desc)
-      .limit(params[:limit] || 10)
-      .offset(params[:offset] || 0)
+    @quotes = QuotesQuery.new(
+      limit: params[:limit],
+      offset: params[:offset],
+      query: params[:query]
+    ).quotes
 
     respond_to do |format|
       format.html
