@@ -3,18 +3,16 @@
   <div class="add_quote_modal__modal">
     <div class="modal__header">
       <div>Add Quotes</div>
-      <span class="modal__close_button">
-        <%= image_tag  "cancel_icon.svg" %>
-      </span>
+      <button class="modal__close_button">
+        <span>+</span>
+      </button>
     </div>
     <form class="modal__body form">
       <div class="quote__error"></div>
       <textarea name="" class="quote__content_input" cols="30" rows="10" placeholder="Content" required></textarea>
       <div class="quote__author_input_container">
         <input type="text" class="quote__author_input" placeholder="Author" required>
-        <div class="autosuggest add_quote__autosuggest">
-          <div class="autosuggest__item">Mercy Oseni</div>
-        </div>
+        <div class="autosuggest add_quote__autosuggest"></div>
       </div>
       <button class="quote__submit_button" type="submit" >Add now</button>
     </form>

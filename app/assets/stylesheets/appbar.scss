@@ -33,16 +33,28 @@
     box-sizing: border-box;
   }
 
-  .appbar__search_icon,
-  .appbar__clear_search_icon {
+  .appbar__search_icon {
     position: absolute;
     right: 12px;
-    top: 8px;
+    top: 10px;
+    width: 15px;
   }
 
-  .appbar__clear_search_icon {
-    top: 12px;
+  .appbar__search_clear_button {
+    position: absolute;
+    right: 10px;
+    top: -1px;
+    background-color: transparent;
+    border: none;
     cursor: pointer;
+
+    span {
+      font-size: 28px;
+      font-weight: 200;
+      color: #535353;
+      display: block;
+      transform: rotate(45deg);
+    }
   }
 }
 
@@ -67,8 +79,8 @@
       width: 14px;
     }
 
-    .appbar__clear_search_icon {
-      top: 10px;
+    .appbar__search_clear_button {
+      top: -3px;
     }
   }
 }
@@ -125,8 +137,12 @@
       top: 6px;
     }
 
-    .appbar__clear_search_icon {
-      top: 6px;
+    .appbar__search_clear_button {
+      right: 6px;
+
+      span {
+        font-size: 24px;
+      }
     }
   }
 
