@@ -26,7 +26,7 @@ class QuotesController < ApplicationController
 
     if quote.save
       flash[:success] = "Quote created successfully"
-      render json: { success: true }, status: :ok
+      redirect_to root_path
     else
       render json: { error: quote.errors.full_messages }, status: 422
     end

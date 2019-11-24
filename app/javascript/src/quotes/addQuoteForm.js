@@ -1,4 +1,4 @@
-$(document).ready(() => AddQuoteForm.init());
+$(document).on('turbolinks:load', () => AddQuoteForm.init());
 
 class AddQuoteForm {
   static init() {
@@ -35,7 +35,6 @@ class AddQuoteForm {
       data: { quote },
       success: () => {
         this.errorElement.hide();
-        document.location.reload();
         $('.modal__close_button').trigger('click');
       },
       error: ({ responseJSON }) => {

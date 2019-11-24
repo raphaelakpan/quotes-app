@@ -116,7 +116,7 @@
     .add_quote_modal__modal {
       background-color: white;
       z-index: 1;
-      width: 500px;
+      width: 517px;
 
       .modal__header {
         background-color: $secondary-color;
@@ -238,6 +238,10 @@
           .quote__author_input,
           .quote__submit_button {
             font-size: 12px;
+          }
+
+          .quote__submit_button {
+            width: 130px;
           }
         }
       }

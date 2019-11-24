@@ -1,4 +1,4 @@
-$(document).ready(() => {
+$(document).on('turbolinks:load', () => {
   const addQuoteButton = $('.quotes__add_button');
   const addQuoteModal = $('.add_quote_modal');
   const addQuoteModalOverlay = $('.add_quote_modal__overlay');
@@ -16,4 +16,3 @@ $(document).ready(() => {
 
   appBarClearSearchButton.click(() => document.location = '/');
 })
-
