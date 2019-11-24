@@ -10,7 +10,12 @@
     <form class="modal__body form">
       <div class="quote__error"></div>
       <textarea name="" class="quote__content_input" cols="30" rows="10" placeholder="Content" required></textarea>
-      <input type="text" class="quote__author_input" placeholder="Author" required>
+      <div class="quote__author_input_container">
+        <input type="text" class="quote__author_input" placeholder="Author" required>
+        <div class="autosuggest add_quote__autosuggest">
+          <div class="autosuggest__item">Mercy Oseni</div>
+        </div>
+      </div>
       <button class="quote__submit_button" type="submit" >Add now</button>
     </form>
   </div>

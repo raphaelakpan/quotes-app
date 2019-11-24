@@ -19,7 +19,7 @@
   .appbar__search {
     position: relative;
     margin-left: 15px;
-    width: 300px;
+    width: 400px;
   }
 
   .appbar__search_input {
@@ -33,10 +33,16 @@
     box-sizing: border-box;
   }
 
-  .appbar__search_icon {
+  .appbar__search_icon,
+  .appbar__clear_search_icon {
     position: absolute;
     right: 12px;
     top: 8px;
+  }
+
+  .appbar__clear_search_icon {
+    top: 12px;
+    cursor: pointer;
   }
 }
 
@@ -49,7 +55,7 @@
     }
 
     .appbar__search {
-      width: 200px;
+      width: 300px;
     }
 
     .appbar__search_input {
@@ -60,14 +66,53 @@
     .appbar__search_icon {
       width: 14px;
     }
+
+    .appbar__clear_search_icon {
+      top: 10px;
+    }
   }
 }
 
+.autosuggest {
+  display: none;
+  position: absolute;
+  background: white;
+  color: black;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  top: 107%;
+  border-radius: 5px;
+  max-height: 150px;
+  overflow-y: scroll;
+
+  .autosuggest__item {
+    font-size: 13px;
+    padding: 7px 20px;
+    cursor: pointer;
+
+    &:first-of-type {
+      padding-top: 10px;
+    }
+
+    &:last-of-type {
+      padding-bottom: 10px;
+    }
+
+    &:hover {
+      background-color: $light-grey;
+    }
+  }
+}
 
 @media screen and (max-width: 500px) {
   .appbar {
     .appbar__brand {
       font-size: 15px;
+    }
+
+    .appbar__search {
+      width: 200px;
     }
 
     .appbar__search_input {
@@ -78,6 +123,17 @@
     .appbar__search_icon {
       width: 12px;
       top: 6px;
+    }
+
+    .appbar__clear_search_icon {
+      top: 6px;
+    }
+  }
+
+  .autosuggest {
+    .autosuggest__item {
+      font-size: 12px;
+      padding: 5px 10px
     }
   }
 }

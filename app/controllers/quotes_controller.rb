@@ -1,6 +1,17 @@
 class QuotesController < ApplicationController
   def index
-    @quotes = Quote.includes(:author).order(created_at: :desc)
+    @quotes = QuotesQuery.new(
+      limit: params[:limit],
+      offset: params[:offset],
+      query: params[:query]
+    ).quotes
+
+    respond_to do |format|
+      format.html
+      format.json do
+        render json: @quotes, each_serializer: QuoteSerializer
+      end
+    end
   end
 
   def create
