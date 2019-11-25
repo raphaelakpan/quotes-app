@@ -9,7 +9,7 @@ class QuotesController < ApplicationController
     respond_to do |format|
       format.html
       format.json do
-        render json: @quotes, each_serializer: QuoteSerializer
+        render json: @quotes, status: :ok
       end
     end
   end
