@@ -1,9 +1,9 @@
 class QuotesQuery
   attr_reader :limit, :offset, :query, :quotes
 
-  def initialize(limit: 10, offset: 0, query: nil)
-    @limit = limit
-    @offset = offset
+  def initialize(limit: nil, offset: nil, query: nil)
+    @limit = limit || 10
+    @offset = offset || 0
     @query = query&.strip
 
     fetch_quotes

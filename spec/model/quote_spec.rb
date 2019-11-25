@@ -7,6 +7,10 @@ describe Quote do
     it "validates presence and length of content" do
       expect(quote.valid?).to be false
       expect(quote.errors[:content]).to eq ["can't be blank", "is too short (minimum is 3 characters)"]
+
+      quote.content = "a" * 1001
+      expect(quote.valid?).to be false
+      expect(quote.errors[:content]).to eq ["is too long (maximum is 1000 characters)"]
     end
 
     it "validates presence author" do
