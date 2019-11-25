@@ -9,7 +9,7 @@ class QuotesController < ApplicationController
     respond_to do |format|
       format.html
       format.json do
-        render json: @quotes, each_serializer: QuoteSerializer
+        render json: @quotes, status: :ok
       end
     end
   end
@@ -26,7 +26,7 @@ class QuotesController < ApplicationController
 
     if quote.save
       flash[:success] = "Quote created successfully"
-      render json: { success: true }, status: :ok
+      redirect_to root_path
     else
       render json: { error: quote.errors.full_messages }, status: 422
     end

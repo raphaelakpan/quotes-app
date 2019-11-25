@@ -83,6 +83,13 @@
     background-color: white;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
     cursor: pointer;
+
+    span {
+      position: absolute;
+      font-weight: 300;
+      font-size: 35px;
+      bottom: 1px;
+    }
   }
 
   .add_quote_modal {
@@ -109,7 +116,7 @@
     .add_quote_modal__modal {
       background-color: white;
       z-index: 1;
-      width: 500px;
+      width: 517px;
 
       .modal__header {
         background-color: $secondary-color;
@@ -122,16 +129,26 @@
 
         .modal__close_button {
           position: absolute;
-          right: 12px;
-          top: 5px;
+          right: 8px;
+          top: -1px;
           cursor: pointer;
+          background-color: transparent;
+          border: none;
+
+          span {
+            font-size: 30px;
+            transform: rotate(45deg);
+            display: block;
+            font-weight: 200;
+            color: #535353;
+          }
         }
       }
 
       .modal__body {
         display: grid;
         grid-gap: 21px;
-        margin: 20px 40px;
+        margin: 23px 43px;
 
         .quote__error {
           display: none;
@@ -221,6 +238,10 @@
           .quote__author_input,
           .quote__submit_button {
             font-size: 12px;
+          }
+
+          .quote__submit_button {
+            width: 130px;
           }
         }
       }

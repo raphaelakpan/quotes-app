@@ -1,10 +1,10 @@
-$(document).ready(() => {
+$(document).on('turbolinks:load', () => {
   const addQuoteButton = $('.quotes__add_button');
   const addQuoteModal = $('.add_quote_modal');
   const addQuoteModalOverlay = $('.add_quote_modal__overlay');
   const closeQuoteModalButton = $('.modal__close_button');
 
-  const appBarClearSearchIcon = $('.appbar__clear_search_icon');
+  const appBarClearSearchButton = $('.appbar__search_clear_button');
 
   const toggleAddQuoteModal = () => {
     addQuoteModal.toggleClass('show');
@@ -14,6 +14,5 @@ $(document).ready(() => {
   closeQuoteModalButton.click(toggleAddQuoteModal);
   addQuoteModalOverlay.click(toggleAddQuoteModal);
 
-  appBarClearSearchIcon.click(() => document.location = '/')
+  appBarClearSearchButton.click(() => document.location = '/');
 })
-

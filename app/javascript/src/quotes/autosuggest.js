@@ -1,4 +1,4 @@
-$(document).ready(() => {
+$(document).on('turbolinks:load', () => {
   // Appbar search input author autosuggest
   const searchInput = $('.appbar__search_input');
   const searchInputAutosuggest = $('.search_input__autosuggest');
@@ -17,7 +17,7 @@ class AuthorAutoSuggest {
     this.autosuggest = autosuggest;
     this.optionSelectedCallback = optionSelectedCallback;
 
-    this.inputElement.keyup(Utility.debounce(this.fetchAuthors, 500));
+    this.inputElement.keyup(Utility.debounce(this.fetchAuthors, 300));
     this.inputElement.focusin(this.fetchAuthors);
     this.inputElement.focusout(() => {
       // If the user clicks on an option, this input loses focus too.

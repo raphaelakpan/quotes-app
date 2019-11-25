@@ -10,7 +10,9 @@
         value="<%= params[:query] %>"
       />
       <% if params[:query].present? %>
-        <%= image_tag  "cancel_icon.svg", class: "appbar__clear_search_icon" %>
+        <button class="appbar__search_clear_button" type="reset">
+          <span>+<span>
+        </button>
       <% else %>
         <%= image_tag  "search_icon.svg", class: "appbar__search_icon" %>
       <% end %>

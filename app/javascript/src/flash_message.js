@@ -1,4 +1,4 @@
-$(document).ready(() => {
+$(document).on('turbolinks:load', () => {
   const flashMessage = $('.flash');
   if (!flashMessage) return;
 
@@ -13,4 +13,4 @@ $(document).ready(() => {
     clearTimeout(timer);
     flashMessage.hide();
   })
-})
+});

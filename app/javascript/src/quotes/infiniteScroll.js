@@ -1,4 +1,4 @@
-$(document).ready(() => {
+$(document).on('turbolinks:load', () => {
   InfiniteScroll.init();
 
   $(document).scroll(() => {
