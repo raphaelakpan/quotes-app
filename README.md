@@ -16,6 +16,7 @@ Others include:
 - Ruby 2.6.2
 - Rails 6.0
 - Bundler 2.0.1
+- Yarn
 
 ## Getting Started
 - To clone the app, run `git clone https://github.com/raphaelakpan/quotes-app.git`
